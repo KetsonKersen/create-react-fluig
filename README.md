@@ -68,7 +68,7 @@ Este projeto é open source e totalmente comunitário! Toda ajuda é bem-vinda p
 - 💻 **Contribua com código** - abra pull requests com melhorias
 - 📝 **Melhore a documentação** - ajude outros desenvolvedores
 - ☕ **Tome um café comigo** - se quiser apoiar financeiramente:
-  - **Buy me a coffee:** `38dcb076-2a9a-4fcd-9dc2-20f5cf236315`
+  - **PIX** `38dcb076-2a9a-4fcd-9dc2-20f5cf236315`
 
 Toda contribuição, por menor que seja, faz diferença! 🙏
 
