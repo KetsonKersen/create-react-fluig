@@ -1,6 +1,6 @@
 {
   "name": "create-react-fluig",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "CLI para criar projetos React integrados ao Fluig.",
   "license": "MIT",
   "type": "module",
