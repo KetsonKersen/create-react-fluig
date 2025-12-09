@@ -18,7 +18,7 @@ const cwd = process.cwd()
         message: "Escolha o tipo de template:",
         choices: [
           { title: "Form", value: "form" },
-          { title: "WCM - Widget", value: "widget" },
+          { title: "Widget", value: "widget" },
         ],
         initial: 0,
       },
@@ -40,14 +40,23 @@ const cwd = process.cwd()
 
   const projectDir = path.join(cwd, response.projectName)
 
+  if (response.projectName.includes("-")) {
+    console.error(
+      chalk.red.bold(
+        '❌ Nome do projeto inválido, não utilize o caracter: "-" '
+      )
+    )
+    process.exit(1)
+  }
+
   if (fs.existsSync(projectDir)) {
     console.error(chalk.red.bold("❌ Diretório já existe!"))
     process.exit(1)
   }
 
   const templates = {
-    form: "https://github.com/KetsonKersen/react-fluig-template.git",
-    widget: "https://github.com/KetsonKersen/react-fluig-widget-template.git",
+    form: "https://github.com/KetsonKersen/react-fluig-form.git",
+    widget: "https://github.com/KetsonKersen/react-fluig-widget.git",
   }
 
   const repoURL = templates[response.template]
@@ -64,14 +73,28 @@ const cwd = process.cwd()
 
   await fs.remove(path.join(projectDir, ".git"))
 
+  const pkgPath = path.join(projectDir, "package.json")
+
+  if (await fs.pathExists(pkgPath)) {
+    const pkg = JSON.parse(await fs.readFile(pkgPath, "utf-8"))
+
+    pkg.name = response.projectName
+    pkg.version = "1.0.0"
+    pkg.private = true
+
+    await fs.writeFile(pkgPath, JSON.stringify(pkg, null, 2))
+  } else {
+    console.log(chalk.red("⚠️ package.json não encontrado no template!"))
+  }
+
   const templateInfo = {
     form: {
       name: "Form",
-      repoLink: "https://github.com/KetsonKersen/react-fluig-template",
+      repoLink: "https://github.com/KetsonKersen/react-fluig-form",
     },
     widget: {
-      name: "WCM - Widget",
-      repoLink: "https://github.com/KetsonKersen/react-fluig-widget-template",
+      name: "Widget",
+      repoLink: "https://github.com/KetsonKersen/react-fluig-widget",
     },
   }
 

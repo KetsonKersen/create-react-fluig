@@ -40,17 +40,17 @@ npm install
 npm run dev
 ```
 
+> **Nota**: Não utilizar o padrão `kebab-case` para a criação de um novo projeto, tente sempre criar projetos seguindo o padrão `snake_case`, `PascalCase` ou `camelCase`
+
 ## 📚 Templates Disponíveis
 
-- **Form**: Template para formulários personalizados no Fluig
-  - [Repositório](https://github.com/KetsonKersen/react-fluig-template)
-  - [Documentação](https://github.com/KetsonKersen/react-fluig-template#readme)
+- **ECM Form**: Template para formulários personalizados no Fluig
+  - [Repositório](https://github.com/KetsonKersen/react-fluig-form)
+  - [Documentação](https://github.com/KetsonKersen/react-fluig-form#readme)
 
-> **Nota**: O template de **widgets** já está em desenvolvimento e será adicionada nas proximas atualizações.
-
-<!-- - **WCM - Widget**: Template para widgets customizados
-  - [Repositório](https://github.com/KetsonKersen/react-fluig-widget-template)
-  - [Documentação](https://github.com/KetsonKersen/react-fluig-widget-template#readme) -->
+- **WCM Widget**: Template para widget no Fluig
+  - [Repositório](https://github.com/KetsonKersen/react-fluig-widget)
+  - [Documentação](hhttps://github.com/KetsonKersen/react-fluig-widget#readme)
 
 ## 📋 Requisitos
 
@@ -68,7 +68,7 @@ Este projeto é open source e totalmente comunitário! Toda ajuda é bem-vinda p
 - 💻 **Contribua com código** - abra pull requests com melhorias
 - 📝 **Melhore a documentação** - ajude outros desenvolvedores
 - ☕ **Tome um café comigo** - se quiser apoiar financeiramente:
-  - **Buy me a coffee:** `38dcb076-2a9a-4fcd-9dc2-20f5cf236315`
+  - **PIX:** `38dcb076-2a9a-4fcd-9dc2-20f5cf236315`
 
 Toda contribuição, por menor que seja, faz diferença! 🙏
 
